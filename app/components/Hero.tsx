@@ -1,3 +1,5 @@
+"use client";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -13,8 +15,19 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
 
+        {/* Team Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900/80 border border-zinc-800 rounded-full mb-8 animate-fade-in-up">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+          </span>
+          <span className="text-sm text-zinc-300 font-medium">VEX Robotics</span>
+          <span className="text-zinc-600">|</span>
+          <span className="text-sm text-indigo-400 font-semibold">Team 210Z</span>
+        </div>
+
         {/* Main Title */}
-        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-in-up">
+        <h1 className="text-7xl sm:text-8xl lg:text-9xl font-extrabold tracking-tighter mb-6 animate-fade-in-up">
           <span className="gradient-text">Eclipse</span>
         </h1>
 
@@ -33,13 +46,13 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up stagger-3">
           <a
-            href="#"
+            href="#quickstart"
             className="btn-primary px-8 py-4 rounded-xl text-base font-medium text-white flex items-center gap-2 w-full sm:w-auto justify-center"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            Get Started
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-            View Documentation
           </a>
           <a
             href="https://github.com"
@@ -61,16 +74,38 @@ export default function Hero() {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in-up stagger-4">
           {[
-            { value: "100+", label: "Autonomous Runs" },
-            { value: "<10ms", label: "Path Computation" },
-            { value: "6+", label: "Competitions" },
-            { value: "99.9%", label: "Reliability" },
+            { value: "100+", label: "Autonomous Runs", icon: (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            )},
+            { value: "<10ms", label: "Path Computation", icon: (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            )},
+            { value: "6+", label: "Competitions", icon: (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            )},
+            { value: "99.9%", label: "Reliability", icon: (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            )},
           ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
+            <div
+              key={index}
+              className="text-center group cursor-default p-4 rounded-xl transition-all duration-300 hover:bg-zinc-900/50 hover:shadow-[0_0_40px_rgba(99,102,241,0.1)]"
+            >
+              <div className="flex justify-center mb-3 text-indigo-400 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                {stat.icon}
+              </div>
+              <div className="text-3xl sm:text-4xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors duration-300">
                 {stat.value}
               </div>
-              <div className="text-sm text-zinc-500">{stat.label}</div>
+              <div className="text-sm text-zinc-500 group-hover:text-zinc-400 transition-colors duration-300">{stat.label}</div>
             </div>
           ))}
         </div>

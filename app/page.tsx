@@ -8,6 +8,7 @@ import {
   ROS2Simulation,
   Awards,
   Footer,
+  QuickStart,
 } from "./components";
 
 export default function Home() {
@@ -25,6 +26,9 @@ export default function Home() {
         <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
 
         <Specifications />
+        <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
+
+        <QuickStart />
         <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
 
         <PathPlanner />

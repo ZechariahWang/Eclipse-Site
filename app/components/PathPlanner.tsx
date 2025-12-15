@@ -8,7 +8,7 @@ export default function PathPlanner() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Visualization */}
           <div className="order-2 lg:order-1 relative">
-            <div className="aspect-square bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden relative">
+            <div className="aspect-square bg-zinc-900/50 border border-zinc-800 rounded-xl overflow-hidden relative transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] hover:border-indigo-500/50">
               {/* Grid background */}
               <div className="absolute inset-0 grid-pattern opacity-50" />
 
@@ -164,7 +164,7 @@ export default function PathPlanner() {
               ].map((metric, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 bg-zinc-900/50 border border-zinc-800 rounded-lg"
+                  className="text-center p-4 bg-zinc-900/50 border border-zinc-800 rounded-lg transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] hover:border-indigo-500/50"
                 >
                   <div className="text-xl font-bold text-indigo-400">{metric.value}</div>
                   <div className="text-xs text-zinc-500 mt-1">{metric.label}</div>

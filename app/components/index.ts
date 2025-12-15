@@ -7,3 +7,4 @@ export { default as PathPlanner } from './PathPlanner';
 export { default as ROS2Simulation } from './ROS2Simulation';
 export { default as Awards } from './Awards';
 export { default as Footer } from './Footer';
+export { default as QuickStart } from './QuickStart';

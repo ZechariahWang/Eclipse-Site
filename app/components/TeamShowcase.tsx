@@ -8,16 +8,12 @@ export default function TeamShowcase() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div>
-            <h2 className="text-sm font-medium text-indigo-400 tracking-wide uppercase mb-4">
-              Primary User
-            </h2>
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Team 210Z
             </h3>
             <p className="text-lg text-zinc-400 mb-8">
               Eclipse was developed by and for Team 210Z, a competitive robotics
-              team that has consistently pushed the boundaries of autonomous
-              performance in VEX Robotics competitions.
+              team based in Calgary, Alberta.
             </p>
 
             {/* Achievements */}
@@ -49,35 +45,23 @@ export default function TeamShowcase() {
               ))}
             </div>
 
-            {/* Quote */}
-            <blockquote className="border-l-2 border-indigo-500 pl-6 italic text-zinc-400">
-              &ldquo;Eclipse transformed our autonomous capabilities. What used to take
-              hours of manual tuning now takes minutes with reliable, repeatable
-              results.&rdquo;
-              <footer className="mt-2 text-sm text-zinc-500 not-italic">
-                — Team 210Z Lead Programmer
-              </footer>
-            </blockquote>
           </div>
 
           {/* Visual/Stats Card */}
           <div className="relative">
             <div className="gradient-border p-8 lg:p-10">
-              {/* Team Logo Placeholder */}
-              <div className="w-full aspect-video bg-zinc-900 rounded-lg mb-8 flex items-center justify-center border border-zinc-800">
-                <div className="text-center">
-                  <div className="text-6xl font-bold gradient-text mb-2">210Z</div>
-                  <div className="text-zinc-500 text-sm">Team Logo</div>
-                </div>
+              {/* Team Logo */}
+              <div className="w-full aspect-video bg-zinc-900 rounded-lg mb-8 overflow-hidden border border-zinc-800">
+                <img src="/210Z.png" alt="Team Logo" className="w-full h-full object-cover" />
               </div>
 
               {/* Team Stats */}
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { value: "2019", label: "Founded" },
-                  { value: "50+", label: "Competitions" },
-                  { value: "15+", label: "Awards Won" },
-                  { value: "3", label: "Seasons with Eclipse" },
+                  { value: "1st", label: "Alberta" },
+                  { value: "6th", label: "Canada" },
+                  { value: "16th", label: "World (22,000+ teams)" },
+                  { value: "37+", label: "Awards" },
                 ].map((stat, index) => (
                   <div key={index} className="text-center p-4 bg-zinc-900/50 rounded-lg border border-zinc-800">
                     <div className="text-2xl font-bold text-white">{stat.value}</div>

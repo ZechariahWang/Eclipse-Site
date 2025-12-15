@@ -56,7 +56,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <p className="text-xs text-zinc-600">
-              &copy; {new Date().getFullYear()} Eclipse. Open source under MIT License.
+              &copy; {new Date().getFullYear()} Eclipse. Open source robotics library.
             </p>
           </div>
         </div>
