@@ -9,11 +9,13 @@ import {
   Awards,
   Footer,
   QuickStart,
+  LoadingScreen,
 } from "./components";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black">
+      <LoadingScreen minimumLoadTime={2000} />
       <Navigation />
       <main>
         <Hero />

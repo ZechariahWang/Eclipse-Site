@@ -1,5 +1,6 @@
 export { default as Navigation } from './Navigation';
 export { default as Hero } from './Hero';
+export { default as HeroBackground } from './HeroBackground';
 export { default as VideoShowcase } from './VideoShowcase';
 export { default as TeamShowcase } from './TeamShowcase';
 export { default as Specifications } from './Specifications';
@@ -8,3 +9,4 @@ export { default as ROS2Simulation } from './ROS2Simulation';
 export { default as Awards } from './Awards';
 export { default as Footer } from './Footer';
 export { default as QuickStart } from './QuickStart';
+export { default as LoadingScreen } from './LoadingScreen';
