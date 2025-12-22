@@ -4,13 +4,14 @@ export default function Specifications() {
     { num: 2, content: '', type: 'empty' },
     { num: 3, content: 'void autonomous() {', type: 'function' },
     { num: 4, content: '    // Drive to goal and score', type: 'comment' },
-    { num: 5, content: '    chassis.', method: 'moveTo', args: '({24, 48}, 1000);', type: 'call' },
-    { num: 6, content: '    intake.', method: 'spin', args: '(600);', type: 'call' },
-    { num: 7, content: '', type: 'empty' },
-    { num: 8, content: '    // Grab next ring while moving', type: 'comment' },
-    { num: 9, content: '    chassis.', method: 'moveTo', args: '({36, 24}, 800, ', keyword: 'async', suffix: ');', type: 'async' },
-    { num: 10, content: '    intake.', method: 'waitUntilDone', args: '();', type: 'call' },
-    { num: 11, content: '}', type: 'function' },
+    { num: 5, content: '    mtp.', method: 'set_mtp_constants', args: '(9, 45, 7, 35, 120, 90);', type: 'async' },
+    { num: 6, content: '    mtp.', method: 'move_to_point', args: '(39, 12, false, false, 1.3);', type: 'call' },
+    { num: 7, content: '    intake.', method: 'spin', args: '(600);', type: 'call' },
+    { num: 8, content: '', type: 'empty' },
+    { num: 9, content: '    // Grab next ring while moving', type: 'comment' },
+    { num: 10, content: '    mtp.', method: 'set_mtp_constants', args: '(9, 45, 7, 35, 120, 90);', type: 'async' },
+    { num: 11, content: '    mtp.', method: 'move_to_point', args: '(39, 12, false, false, 1.3);', type: 'call' },
+    { num: 12, content: '}', type: 'function' },
   ];
 
   return (
@@ -49,12 +50,10 @@ export default function Specifications() {
               Implements pure pursuit, boomerang, and holonomic move-to-pose algorithms for precise robot positioning.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">PID</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Feedforward</span>
               <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Motion profiler</span>
               <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Pure pursuit</span>
               <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Boomerang</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Holonomic move-to-pose</span>
+              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">PID</span>
             </div>
           </div>
 
@@ -66,9 +65,9 @@ export default function Specifications() {
               for accurate robot position estimation and drift correction.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Extended Kalman Filter</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Wheel odometry</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">GPS fusion</span>
+              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Kalman Filter</span>
+              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Odometry</span>
+              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">GPS</span>
             </div>
           </div>
 
@@ -132,8 +131,6 @@ export default function Specifications() {
                           <span className="text-zinc-300">{line.content}</span>
                           <span className="text-yellow-400">{line.method}</span>
                           <span className="text-cyan-300">{line.args}</span>
-                          <span className="text-purple-400">{line.keyword}</span>
-                          <span className="text-cyan-300">{line.suffix}</span>
                         </>
                       )}
                     </td>

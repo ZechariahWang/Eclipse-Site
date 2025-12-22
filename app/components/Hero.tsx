@@ -21,16 +21,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-32 text-center">
-        {/* Team Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-900/80 border border-zinc-800/50 rounded-full mb-8 animate-fade-in-up backdrop-blur-sm">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-accent opacity-75" style={{ backgroundColor: "var(--cyan-accent)" }}></span>
-            <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: "var(--cyan-accent)" }}></span>
-          </span>
-          <span className="text-sm text-zinc-300 font-medium">VEX Robotics</span>
-          <span className="text-zinc-600">|</span>
-          <span className="text-sm font-semibold" style={{ color: "var(--cyan-accent)" }}>Team 210Z</span>
-        </div>
+
 
         {/* Main Title - Using Space Grotesk */}
         <h1 className="hero-title-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-6 animate-fade-in-up">
@@ -89,7 +80,7 @@ export default function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 animate-fade-in-up stagger-4">
+        {/* <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 animate-fade-in-up stagger-4">
           {[
             {
               value: "100+",
@@ -164,10 +155,10 @@ export default function Hero() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in-up stagger-5">
+        {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in-up stagger-5">
           <div className="flex flex-col items-center gap-2 text-zinc-500">
             <span className="text-xs uppercase tracking-widest">Scroll to explore</span>
             <div className="w-6 h-10 rounded-full border border-zinc-700 flex items-start justify-center p-2">
@@ -177,7 +168,7 @@ export default function Hero() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

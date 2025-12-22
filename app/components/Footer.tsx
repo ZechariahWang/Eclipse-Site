@@ -18,7 +18,7 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-3">
               <a
-                href="https://github.com"
+                href="https://github.com/ZechariahWang/Eclipse"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-zinc-500 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"

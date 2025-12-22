@@ -19,10 +19,10 @@ export default function TeamShowcase() {
             {/* Achievements */}
             <div className="space-y-4 mb-8">
               {[
-                "Multiple tournament wins powered by Eclipse autonomous routines",
-                "Top-tier skills scores using advanced path planning algorithms",
-                "Consistent qualification for state and regional championships",
-                "Open-source contributions to the robotics community",
+                "2023 Mecha Mayhem Champion ",
+                "2023 Alberta Provincial Champions",
+                "2024 WestMech Excellence in Programming Award",
+                "used in over 50+ robots within Alberta",
               ].map((achievement, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <div className="mt-1 w-5 h-5 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0">

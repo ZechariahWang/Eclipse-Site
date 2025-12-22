@@ -80,17 +80,6 @@ export default function ROS2Simulation() {
                 <line x1="360" y1="170" x2="440" y2="170" stroke="#4b5563" strokeWidth="1" strokeDasharray="2 2" />
               </svg>
 
-              {/* Legend */}
-              <div className="absolute bottom-4 left-4 flex gap-4 text-xs">
-                <span className="flex items-center gap-1">
-                  <span className="w-3 h-0.5 bg-zinc-500" />
-                  Data Flow
-                </span>
-                <span className="flex items-center gap-1">
-                  <span className="w-3 h-0.5 bg-zinc-500" style={{ strokeDasharray: '2 2' }} />
-                  Optional
-                </span>
-              </div>
             </div>
           </div>
 
