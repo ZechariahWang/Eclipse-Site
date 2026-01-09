@@ -41,7 +41,7 @@ export default function LoadingScreen({ minimumLoadTime = 1500 }: LoadingScreenP
           // Remove from DOM after fade animation
           setTimeout(() => {
             setIsVisible(false);
-          }, 500);
+          }, 700);
         }, 200);
       }, remainingTime);
     };
@@ -66,11 +66,8 @@ export default function LoadingScreen({ minimumLoadTime = 1500 }: LoadingScreenP
       className={`loading-screen ${isLoading ? "loading-screen-visible" : "loading-screen-hidden"}`}
       aria-hidden={!isLoading}
     >
-      {/* Background with gradient */}
+      {/* Background */}
       <div className="loading-screen-bg" />
-
-      {/* Grid pattern overlay */}
-      <div className="loading-screen-grid" />
 
       {/* Content */}
       <div className="loading-screen-content">
@@ -87,7 +84,7 @@ export default function LoadingScreen({ minimumLoadTime = 1500 }: LoadingScreenP
               cy="50"
               r="45"
               fill="none"
-              stroke="url(#loading-gradient)"
+              stroke="#9FAA75"
               strokeWidth="2"
               className="loading-ring loading-ring-outer"
             />
@@ -97,7 +94,7 @@ export default function LoadingScreen({ minimumLoadTime = 1500 }: LoadingScreenP
               cy="50"
               r="32"
               fill="none"
-              stroke="url(#loading-gradient-2)"
+              stroke="#E4E9D3"
               strokeWidth="1.5"
               className="loading-ring loading-ring-middle"
             />
@@ -106,41 +103,9 @@ export default function LoadingScreen({ minimumLoadTime = 1500 }: LoadingScreenP
               cx="50"
               cy="50"
               r="18"
-              fill="url(#loading-core-gradient)"
+              fill="#9FAA75"
               className="loading-core"
             />
-            {/* Eclipse effect - shadow */}
-            <circle
-              cx="50"
-              cy="50"
-              r="16"
-              fill="var(--deep-navy)"
-              className="loading-eclipse"
-            />
-            {/* Glow point */}
-            <circle
-              cx="66"
-              cy="50"
-              r="3"
-              fill="var(--cyan-accent)"
-              className="loading-glow-point"
-            />
-            {/* Gradient definitions */}
-            <defs>
-              <linearGradient id="loading-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="var(--primary-indigo)" />
-                <stop offset="50%" stopColor="var(--cyan-accent)" />
-                <stop offset="100%" stopColor="var(--purple-accent)" />
-              </linearGradient>
-              <linearGradient id="loading-gradient-2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="var(--cyan-accent)" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="var(--primary-indigo)" stopOpacity="0.3" />
-              </linearGradient>
-              <radialGradient id="loading-core-gradient" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="var(--primary-indigo)" />
-                <stop offset="100%" stopColor="var(--deep-navy)" />
-              </radialGradient>
-            </defs>
           </svg>
         </div>
 
@@ -162,20 +127,6 @@ export default function LoadingScreen({ minimumLoadTime = 1500 }: LoadingScreenP
           </div>
           <span className="loading-progress-text">{Math.round(progress)}%</span>
         </div>
-      </div>
-
-      {/* Decorative particles */}
-      <div className="loading-particles">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="loading-particle"
-            style={{
-              left: `${15 + (i * 14)}%`,
-              animationDelay: `${i * 0.3}s`,
-            }}
-          />
-        ))}
       </div>
     </div>
   );

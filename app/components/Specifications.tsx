@@ -15,85 +15,83 @@ export default function Specifications() {
   ];
 
   return (
-    <section id="specs" className="py-24 lg:py-32 relative">
-      <div className="absolute inset-0 grid-pattern" />
-
+    <section id="specs" className="py-24 lg:py-32 relative bg-white">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#32302F] mb-6">
             What Eclipse Does
           </h3>
-          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-lg text-[#6B6B6B] max-w-2xl mx-auto">
             The stuff under the hood that makes autonomous routines work.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Path Planning */}
-          <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] hover:border-indigo-500/50">
-            <h4 className="text-xl font-semibold text-white mb-3">Path Planning</h4>
-            <p className="text-zinc-400 mb-4">
+          <div className="p-6 bg-white border border-[#E5E5E5] rounded-xl transition-all duration-500 hover:shadow-md hover:border-[#9FAA75]">
+            <h4 className="text-xl font-semibold text-[#32302F] mb-3">Path Planning</h4>
+            <p className="text-[#6B6B6B] mb-4">
               Generate smooth trajectories using Bezier curve path planner for optimal robot movement.
               AI path router currently in development for intelligent obstacle avoidance and dynamic path optimization.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Bezier curves</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">AI path router</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Bezier curves</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">AI path router</span>
             </div>
           </div>
 
           {/* Motion Control */}
-          <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] hover:border-indigo-500/50">
-            <h4 className="text-xl font-semibold text-white mb-3">Motion Control</h4>
-            <p className="text-zinc-400 mb-4">
+          <div className="p-6 bg-white border border-[#E5E5E5] rounded-xl transition-all duration-500 hover:shadow-md hover:border-[#9FAA75]">
+            <h4 className="text-xl font-semibold text-[#32302F] mb-3">Motion Control</h4>
+            <p className="text-[#6B6B6B] mb-4">
               Advanced motion control algorithms including PID controllers, motion profiler, and feedforward control.
               Implements pure pursuit, boomerang, and holonomic move-to-pose algorithms for precise robot positioning.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Motion profiler</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Pure pursuit</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Boomerang</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">PID</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Motion profiler</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Pure pursuit</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Boomerang</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">PID</span>
             </div>
           </div>
 
           {/* Odometry */}
-          <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] hover:border-indigo-500/50">
-            <h4 className="text-xl font-semibold text-white mb-3">Odometry & Localization</h4>
-            <p className="text-zinc-400 mb-4">
+          <div className="p-6 bg-white border border-[#E5E5E5] rounded-xl transition-all duration-500 hover:shadow-md hover:border-[#9FAA75]">
+            <h4 className="text-xl font-semibold text-[#32302F] mb-3">Odometry & Localization</h4>
+            <p className="text-[#6B6B6B] mb-4">
               Sensor fusion using Extended Kalman Filter to combine wheel odometry and GPS data
               for accurate robot position estimation and drift correction.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Kalman Filter</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Odometry</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">GPS</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Kalman Filter</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Odometry</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">GPS</span>
             </div>
           </div>
 
           {/* Async Tasks */}
-          <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.15)] hover:border-indigo-500/50">
-            <h4 className="text-xl font-semibold text-white mb-3">Async & Scheduling</h4>
-            <p className="text-zinc-400 mb-4">
+          <div className="p-6 bg-white border border-[#E5E5E5] rounded-xl transition-all duration-500 hover:shadow-md hover:border-[#9FAA75]">
+            <h4 className="text-xl font-semibold text-[#32302F] mb-3">Async & Scheduling</h4>
+            <p className="text-[#6B6B6B] mb-4">
               Task scheduler with priority queues for concurrent execution of robot subsystems.
               Event callbacks enable responsive, non-blocking operation.
             </p>
             <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Task scheduler</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Priority queues</span>
-              <span className="px-3 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full">Event callbacks</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Task scheduler</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Priority queues</span>
+              <span className="px-3 py-1 text-xs bg-[#E4E9D3] text-[#32302F] rounded-full">Event callbacks</span>
             </div>
           </div>
         </div>
 
         {/* Code Preview */}
-        <div className="mt-12 bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(99,102,241,0.1)] hover:border-indigo-500/30">
+        <div className="mt-12 bg-[#F5F5F0] border border-[#E5E5E0] rounded-xl overflow-hidden transition-all duration-500 hover:shadow-md">
           {/* Header */}
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 bg-zinc-900/50">
-            <div className="w-3 h-3 rounded-full bg-red-500/80" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-            <div className="w-3 h-3 rounded-full bg-green-500/80" />
-            <span className="ml-4 text-xs text-zinc-500 font-mono">autonomous.cpp</span>
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-[#E5E5E0] bg-[#EEEEE8]">
+            <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
+            <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
+            <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
+            <span className="ml-4 text-xs text-[#6B6B6B] font-mono">autonomous.cpp</span>
           </div>
 
           {/* Code with line numbers */}
@@ -101,36 +99,36 @@ export default function Specifications() {
             <table className="w-full text-sm font-mono">
               <tbody>
                 {codeLines.map((line) => (
-                  <tr key={line.num} className="hover:bg-zinc-800/30 transition-colors">
-                    <td className="py-0.5 pl-4 pr-4 text-right text-zinc-600 select-none border-r border-zinc-800 w-12">
+                  <tr key={line.num} className="hover:bg-[#EEEEE8] transition-colors duration-300">
+                    <td className="py-0.5 pl-4 pr-4 text-right text-[#9FAA75] select-none border-r border-[#E5E5E0] w-12">
                       {line.num}
                     </td>
-                    <td className="py-0.5 pl-4 pr-6 text-zinc-300 whitespace-pre">
+                    <td className="py-0.5 pl-4 pr-6 text-[#32302F] whitespace-pre">
                       {line.type === 'include' && (
                         <>
-                          <span className="text-purple-400">#include </span>
-                          <span className="text-green-400">{line.highlight}</span>
+                          <span className="text-[#9FAA75]">#include </span>
+                          <span className="text-[#6B6B6B]">{line.highlight}</span>
                         </>
                       )}
                       {line.type === 'empty' && ' '}
                       {line.type === 'function' && (
-                        <span className="text-blue-400">{line.content}</span>
+                        <span className="text-[#32302F]">{line.content}</span>
                       )}
                       {line.type === 'comment' && (
-                        <span className="text-zinc-500">{line.content}</span>
+                        <span className="text-[#9FAA75]">{line.content}</span>
                       )}
                       {line.type === 'call' && (
                         <>
-                          <span className="text-zinc-300">{line.content}</span>
-                          <span className="text-yellow-400">{line.method}</span>
-                          <span className="text-cyan-300">{line.args}</span>
+                          <span className="text-[#32302F]">{line.content}</span>
+                          <span className="text-[#6B6B6B]">{line.method}</span>
+                          <span className="text-[#32302F]">{line.args}</span>
                         </>
                       )}
                       {line.type === 'async' && (
                         <>
-                          <span className="text-zinc-300">{line.content}</span>
-                          <span className="text-yellow-400">{line.method}</span>
-                          <span className="text-cyan-300">{line.args}</span>
+                          <span className="text-[#32302F]">{line.content}</span>
+                          <span className="text-[#6B6B6B]">{line.method}</span>
+                          <span className="text-[#32302F]">{line.args}</span>
                         </>
                       )}
                     </td>

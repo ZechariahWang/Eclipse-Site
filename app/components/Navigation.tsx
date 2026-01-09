@@ -26,8 +26,8 @@ export default function Navigation() {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4">
       <nav
-        className={`transition-all duration-300 ease-out bg-zinc-900/80 backdrop-blur-xl border border-zinc-800 shadow-2xl shadow-black/50 rounded-2xl ${
-          scrolled ? "opacity-100" : "opacity-90"
+        className={`transition-all duration-500 bg-white border border-[#E5E5E5] shadow-sm rounded-2xl ${
+          scrolled ? "shadow-md" : ""
         }`}
       >
         <div className="px-4">
@@ -39,7 +39,7 @@ export default function Navigation() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-1.5 text-sm text-zinc-400 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                  className="px-3 py-1.5 text-sm text-[#6B6B6B] hover:text-[#32302F] transition-colors duration-500 rounded-lg hover:bg-[#F8F8F8]"
                 >
                   {link.label}
                 </a>
@@ -49,10 +49,10 @@ export default function Navigation() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
               <a
-                href="https://github.com"
+                href="https://github.com/ZechariahWang/Eclipse"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-zinc-400 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                className="p-2 text-[#6B6B6B] hover:text-[#32302F] transition-colors duration-500 rounded-lg hover:bg-[#F8F8F8]"
                 aria-label="GitHub"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@ export default function Navigation() {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-zinc-400 hover:text-white rounded-lg hover:bg-white/5"
+              className="lg:hidden p-2 text-[#6B6B6B] hover:text-[#32302F] rounded-lg hover:bg-[#F8F8F8] transition-colors duration-500"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -98,13 +98,13 @@ export default function Navigation() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="lg:hidden py-4 border-t border-zinc-800/50">
+            <div className="lg:hidden py-4 border-t border-[#E5E5E5]">
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="px-4 py-3 text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                    className="px-4 py-3 text-[#6B6B6B] hover:text-[#32302F] hover:bg-[#F8F8F8] rounded-lg transition-colors duration-500"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}

@@ -1,14 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="relative border-t border-zinc-800">
-      <div className="absolute inset-0 grid-pattern opacity-30" />
-
+    <footer className="relative border-t border-[#E5E5E5] bg-white">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="py-12 flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start gap-2">
-            <span className="text-xl font-semibold text-white">Eclipse</span>
-            <p className="text-sm text-zinc-500">
+            <span className="text-xl font-semibold text-[#32302F]">Eclipse</span>
+            <p className="text-sm text-[#6B6B6B]">
               A modern robotics framework for autonomous systems.
             </p>
           </div>
@@ -21,7 +19,7 @@ export default function Footer() {
                 href="https://github.com/ZechariahWang/Eclipse"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-zinc-500 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                className="p-2 text-[#6B6B6B] hover:text-[#32302F] hover:bg-[#F8F8F8] rounded-lg transition-colors duration-500"
                 aria-label="GitHub"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -34,7 +32,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="p-2 text-zinc-500 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                className="p-2 text-[#6B6B6B] hover:text-[#32302F] hover:bg-[#F8F8F8] rounded-lg transition-colors duration-500"
                 aria-label="Discord"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -45,7 +43,7 @@ export default function Footer() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-zinc-500 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                className="p-2 text-[#6B6B6B] hover:text-[#32302F] hover:bg-[#F8F8F8] rounded-lg transition-colors duration-500"
                 aria-label="YouTube"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -55,8 +53,8 @@ export default function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="text-xs text-zinc-600">
-              &copy; {new Date().getFullYear()} Eclipse. Open source robotics library.
+            <p className="text-xs text-[#6B6B6B]">
+              {new Date().getFullYear()} Eclipse. Open source robotics library.
             </p>
           </div>
         </div>

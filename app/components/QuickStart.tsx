@@ -19,11 +19,11 @@ function CopyButton({ code }: { code: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="absolute top-3 right-3 p-2 text-zinc-400 hover:text-white bg-zinc-800/50 hover:bg-zinc-700/50 rounded-lg transition-all duration-200"
+      className="absolute top-3 right-3 p-2 text-[#6B6B6B] hover:text-[#32302F] bg-white/80 hover:bg-white rounded-lg transition-all duration-500"
       aria-label="Copy code"
     >
       {copied ? (
-        <svg className="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 text-[#9FAA75]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
         </svg>
       ) : (
@@ -38,12 +38,12 @@ function CopyButton({ code }: { code: string }) {
 function CodeBlock({ code, language = "bash" }: CodeBlockProps) {
   return (
     <div className="relative group">
-      <div className="bg-zinc-900/80 border border-zinc-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-indigo-500/30">
-        <div className="flex items-center justify-between px-4 py-2 border-b border-zinc-800 bg-zinc-900/50">
-          <span className="text-xs text-zinc-500 font-mono">{language}</span>
+      <div className="bg-[#F5F5F0] border border-[#E5E5E0] rounded-xl overflow-hidden transition-all duration-500 hover:border-[#9FAA75]">
+        <div className="flex items-center justify-between px-4 py-2 border-b border-[#E5E5E0] bg-[#EEEEE8]">
+          <span className="text-xs text-[#6B6B6B] font-mono">{language}</span>
         </div>
         <div className="p-4 overflow-x-auto">
-          <pre className="text-sm font-mono text-zinc-300">
+          <pre className="text-sm font-mono text-[#32302F]">
             <code>{code}</code>
           </pre>
         </div>
@@ -82,20 +82,16 @@ AssetConfig config(
   ];
 
   return (
-    <section id="quickstart" className="py-24 lg:py-32 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-500/5 to-transparent" />
-      <div className="absolute inset-0 grid-pattern" />
-
+    <section id="quickstart" className="py-24 lg:py-32 relative overflow-hidden bg-[#F8F8F8]">
       <div className="relative max-w-4xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-medium text-indigo-400 tracking-wide uppercase mb-4">
+          <h2 className="text-sm font-medium text-[#9FAA75] tracking-wide uppercase mb-4">
             Quick Start
           </h2>
-          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#32302F] mb-6">
             Get up and running in minutes
           </h3>
-          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-lg text-[#6B6B6B] max-w-2xl mx-auto">
             Follow these simple steps to integrate Eclipse into your VEX robotics project.
           </p>
         </div>
@@ -107,24 +103,24 @@ AssetConfig config(
               className="relative pl-16 lg:pl-20"
             >
               {/* Step number */}
-              <div className="absolute left-0 top-0 w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
-                <span className="text-sm lg:text-base font-mono font-bold text-indigo-400">
+              <div className="absolute left-0 top-0 w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-[#E4E9D3] border border-[#9FAA75]/20 flex items-center justify-center">
+                <span className="text-sm lg:text-base font-mono font-bold text-[#9FAA75]">
                   {step.number}
                 </span>
               </div>
 
               {/* Connecting line */}
               {index < steps.length - 1 && (
-                <div className="absolute left-[19px] lg:left-[23px] top-12 lg:top-14 w-px h-[calc(100%+2rem)] bg-gradient-to-b from-indigo-500/30 to-transparent" />
+                <div className="absolute left-[19px] lg:left-[23px] top-12 lg:top-14 w-px h-[calc(100%+2rem)] bg-[#E5E5E5]" />
               )}
 
               {/* Content */}
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-xl font-semibold text-white mb-1">
+                  <h4 className="text-xl font-semibold text-[#32302F] mb-1">
                     {step.title}
                   </h4>
-                  <p className="text-zinc-400 text-sm">
+                  <p className="text-[#6B6B6B] text-sm">
                     {step.description}
                   </p>
                 </div>
